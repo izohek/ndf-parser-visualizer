@@ -1,0 +1,12 @@
+// Ne pas éditer, ce fichier est auto-généré !
+
+
+
+
+export Descriptor_OrderAvailability_test_avion_alex is [
+]
+export Descriptor_OrderAvailability_test_avion_bomber is [
+    "Bombarder",
+]
+export Descriptor_OrderAvailability_test_avion_cas is [
+]

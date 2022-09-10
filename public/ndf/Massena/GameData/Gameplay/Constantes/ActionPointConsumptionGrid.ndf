@@ -1,0 +1,41 @@
+export ActionPointGridGeometryParameters is InfluenceMapGeometryParameters
+(
+    DistanceDeLissage = 0.0
+    DecallageCelluleVideParDefaut = -0.4
+)
+
+export ActionPointConsumptionGridConstants is TActionPointConsumptionGridConstantsDescriptor
+(
+    //---------------------------------------------------------------------------------------//
+    //--------------------------------- REGLAGES GAMEPLAY -----------------------------------//
+    //---------------------------------------------------------------------------------------//
+    TerrainsBloquants = [
+        ~/ETerrainType/EauPeuProfonde,         //Rivers/Lake
+    ]
+     TerrainsRalentisseurs = [
+         ~/ETerrainType/ForetDense, // foret sans route
+         //~/ETerrainType/ForetDense,
+         //~/ETerrainType/Urbain,
+         //~/ETerrainType/StrategicRalentisseur, //deprec
+         //~/ETerrainType/EauPeuProfonde,
+     ]
+     TerrainsAccelerateurs = [
+       //~/ETerrainType/BloqueConstruction,
+         ~/ETerrainType/StrategicAccelerateur,  //deprec
+         ~/ETerrainType/PetitBatiment,  //semi urbain avec route
+         ~/ETerrainType/ForetLegere,  //foret avec route
+         ~/ETerrainType/NidMitrailleuse,  //plaine avec route
+     ]
+
+    // Precision de la grille : Attention à l'impact sur les perfs
+    TailleDeCaseApproximative = ~/ActionPointConsumptionRefs/CaseSize // ATTENTION : modifier cette valeur dans GameData:/Gameplay/Constantes/ActionPointConsumptionGridRefs.ndf
+
+    //---------------------------------------------------------------------------------------//
+    //--------------------------------- REGLAGES FEEDBACK -----------------------------------//
+    //---------------------------------------------------------------------------------------//
+    CouleurDeLaCourbe = RGBA [19,85,106,215]  //[96,57,19,255]
+    EpaisseurDeLaCourbe = 1200
+    RemplirLePolygon = true
+    CouleurDuRemplissage = RGBA [19,85,106,85]
+    ParametresDeCalculDeLaGeometry = ActionPointGridGeometryParameters
+)

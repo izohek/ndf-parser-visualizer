@@ -1,0 +1,1142 @@
+// Ne pas éditer, ce fichier est auto-généré !
+
+
+export Descriptor_Unit_test_avion_alex is TEntityDescriptor
+(
+    DescriptorId       = GUID:{d676f274-6c18-4f49-ae75-f3d353007196}
+    ClassNameForDebug  = 'Pawn_test_avion_alex'
+    ModulesDescriptors = [
+        // TypeUnit
+            TModuleSelector
+            (
+                Default            = TTypeUnitModuleDescriptor
+                (
+                    TypeUnitValue                    = ETypeUnit/Undef
+                    Nationalite                      = ENationalite/Allied
+                    TypeUnitFormation                = 'Char'
+                )
+                Selection = [
+                    NilDescriptorIfCadavre,
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TTypeUnitModuleDescriptor
+                        (
+                            Nationalite                      = ENationalite/Allied
+                            TypeUnitValue                    = ETypeUnit/Undef
+                        )
+                    )
+                ]
+            ),
+
+        // Flags
+            TFlagsModuleDescriptor
+            (
+                InitialFlagSet =
+                [
+                    Flag_Detectable,
+                    Flag_LdDetectable,
+                    Flag_Avion,
+                    Flag_Highlightable,
+                    Flag_Selectionnable,
+                    Flag_Target,
+                    Flag_HighAltitudeFlying,
+                    Flag_DetectableLowAltitude,
+                    Flag_Blessable,
+                    Flag_DEPRECATED_NePasUtiliser_OnlyForBriquePython_UniteDeCommandement,
+                ]
+            ),
+
+        // Position
+            TModuleSelector
+            (
+                Default        = TPositionModuleDescriptor
+                (
+                    UseFollowCam               = False
+                    StickToGround              = True
+                    InGeoDb                    = True
+                    PorteurMustBeVisible       = True
+                    ClampInWorld               = False
+                    ClampOutMap                = True
+                    HasNearlyNullBBox          = False
+                    GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                    Radius                     = ((0) * Metre)
+                    RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                    LowAltitudeFlyingAltitude  = ((0) * Metre)
+                    NearGroundFlyingAltitude   = ((0) * Metre)
+                )
+                Selection = [
+                    TModuleSelectorFilterIfCadavre
+                    (
+                        Descriptor = TPositionModuleDescriptor
+                        (
+                            UseFollowCam               = False
+                            StickToGround              = True
+                            InGeoDb                    = False
+                            PorteurMustBeVisible       = True
+                            ClampInWorld               = False
+                            ClampOutMap                = True
+                            HasNearlyNullBBox          = False
+                            GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                            Radius                     = ((0) * Metre)
+                            RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                            LowAltitudeFlyingAltitude  = ((0) * Metre)
+                            NearGroundFlyingAltitude   = ((0) * Metre)
+                        )
+                    ),
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TPositionModuleDescriptor
+                        (
+                            UseFollowCam               = False
+                            StickToGround              = True
+                            InGeoDb                    = False
+                            PorteurMustBeVisible       = True
+                            ClampInWorld               = False
+                            ClampOutMap                = True
+                            HasNearlyNullBBox          = False
+                            GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                            Radius                     = ((0) * Metre)
+                            RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                            LowAltitudeFlyingAltitude  = ((0) * Metre)
+                            NearGroundFlyingAltitude   = ((0) * Metre)
+                        )
+                    ),
+                ]
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // Tags
+            TTagsModuleDescriptor
+            (
+                TagSet = [
+                    "AllUnits",
+                    "Unite",
+                    "UNITE_test_avion_alex",
+                    "InfmapCommander",
+                ]
+            ),
+
+        // ApparenceModel
+        ApparenceModel is
+            TApparenceModelModuleDescriptor
+            (
+                PickableObject                     = True
+                Depiction                          = ~/Gfx_Modele_F16E_AA_US
+            ),
+
+        // GhostModule
+            TModuleSelector
+            (
+                Default        = nil
+                Selection      = [
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TGhostModuleDescriptor()
+                    )
+                ]
+            ),
+
+        // StateEngine
+            TModuleSelector
+            (
+                Default        = TStateEngineModuleDescriptor
+                (
+                    InitialStateId = 'UnitIdle'
+                    StateEngineUpdateMode = WorldControllerAccess_InWorld
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // Debug
+            ~/DebugModuleDescriptor,
+
+        // Selection
+            TModuleSelector
+            (
+                Default            = TSelectionModuleDescriptor
+                (
+                    IsSelectable       = True
+                    IsHighlightable    = True
+                    HasSelectionShader = False
+                    HasHighlightShader = True
+                    MultipleSelectionFilterPriorityDefault      = 0
+                    MultipleSelectionFilterPrioritySecondary    = 0
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+
+        // EffectApplier
+            ~/EffectApplierModuleSelector,
+
+        // Label
+            TStrategicLabelModuleDescriptor
+            (
+                BackgroundTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+                (
+                    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+                    Alterator = $/GUIOption/StrategicIconType
+                    Values =
+                    [
+                        "Texture_STRATEGIC_RTS_H_Hel",
+                        "Texture_STRATEGIC_Hel",
+                    ]
+                )
+            ),
+
+        // Orderable
+            TModuleSelector
+            (
+                Default                   = TOrderableModuleDescriptor
+                (
+                UnlockableOrders          = ~/Descriptor_OrderAvailability_test_avion_alex
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // OrderDisplay
+            ~/OrderDisplayModuleDescriptor,
+
+        // PackSignaux
+            ~/PackSignauxModuleDescriptor,
+
+        // Deck
+            TModuleSelector
+            (
+                Default        = TDeckModuleDescriptor
+                (
+                    DeckIdentifier = 'pion_US_testAvion'
+                    RegimentName = 'None'
+                    Score = 1
+                    PictureForSelection = 'Texture_PawnPicture_Default'
+                    DeckType = 2 //GroupeArmee
+                    MaxPackCount = 12
+                )
+                Selection = [ ~/NilDescriptorIfGhostOrCadavre ]
+            ),
+
+        // StrategicBattle
+        TModuleSelector
+        (
+            Default = TStrategicBattleModuleDescriptor
+            (
+                CanEngageBattle = False
+                CanBeInitialTarget = False
+                HasZoneOfControl = False
+                AirDenyRadius = 4000.0 * Metre
+                AirDenyRange = -1.0 * Metre
+                BattleSupportRadius = 100000000.0 * Metre
+                MinBattleSupportRadius = 1.0 * Metre
+            )
+            Selection = [ ~/NilDescriptorIfGhostOrCadavre ]
+        ),
+
+        // Visibility
+            TModuleSelector
+            (
+                Default        = TVisibilityModuleDescriptor
+                (
+                    AutoRevealType       = EAutoRevealType/AutoRevealAllies
+                    UnitConcealmentBonus = 1.0
+                    VisionUnitType       = EVisionUnitType/Undefined
+                    AlwaysComputeLoS     = False
+                    UnitIsStealth        = False
+                    HideFromDebug        = False
+                    VisionObstructionType = EVisionObstructionType/Air
+                    GroundDissimulationModifierType = EGroundDissumulationModifierType/Air
+                )
+                Selection = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // RemoteScanning
+            TModuleSelector
+            (
+                Default        = TRemoteScanningModuleDescriptor
+                (
+                    ScanningRange = ((0.0) * Metre)
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+
+        // Scanner
+            TModuleSelector
+            (
+                Default        = TReverseScannerWithIdentificationDescriptor
+                (
+                    VisibilityRollRule = TModernWarfareVisibilityRollRule
+                    (
+                        IdentifyBaseProbability     = 0.0
+                        TimeBetweenEachIdentifyRoll = 0.0
+                        VisibilityRuleDescriptor    = ~/StandardWargameVisibilityRollRule
+                        DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
+                        (
+                            MultiplicateurAPorteeMaximale            = DefaultMultiplicateurAPorteeMaximale
+                            MultiplicateurAPorteeMinimale            = DefaultMultiplicateurAPorteeMinimale
+                            Exposant                                 = DefaultExposant
+                            MultiplicateurAPorteeMaximaleEnMouvement = DefaultMultiplicateurAPorteeMaximaleEnMouvement
+                            MultiplicateurAPorteeMinimaleEnMouvement = DefaultMultiplicateurAPorteeMinimaleEnMouvement
+                            ExposantEnMouvement                      = DefaultExposantEnMouvement
+                        )
+                    )
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // ActionPoints
+        TActionPointsModuleDescriptor
+        (
+            InitialActionPoint = 4
+            ActionPointRecoveryPerTurn = 4
+            NbInitialActionsPointsForProducedPawn = 4
+        ),
+
+        // StrategicMovementLink
+        $/GFX/Everything/StrategicMovementDescriptor_aerial,
+
+        // StrategicAerial
+        TStrategicAerialModuleDescriptor
+        (
+        ),
+
+        // CubeAction
+            TCubeActionModuleDescriptor
+            (
+                CubeActionDescriptor = ~/CubeAction_Menu_Ordres_Pawn
+            ),
+
+        // PawnUI
+        TPawnUIModuleDescriptor
+        (
+            HintToken = 'None'
+            NameToken = TBUCKToolAlternativeValues_TLocalisationStringTokenFromTEugBMutableBoolean
+             (
+                 CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicPawnName
+                 Alterator = $/GUIOption/StrategicPawnName
+                 Values =
+                 [
+                     (~/LocalisationConstantes/dico_unites, "ETCJQTKOED"),
+                     (~/LocalisationConstantes/dico_unites, "None"),
+                 ]
+             )
+            ProdMenuTexture = 'Texture_Button_Pawn_test_avion_alex'
+            CountryTexture = 'CommonTexture_MotherCountryFlag_None'
+        ),
+
+        // Cosmetic
+        TCosmeticModuleDescriptor
+        (
+            FxByActionList = MAP
+            [
+            ]
+            SoundByActionList = MAP
+            [
+                  ('Die', TSoundDescriptor
+                      (
+                          SoundSettings = $/SoundSettings/SFX_SoundSettings
+                          TheSoundStream = TSoundStream(FileName = 'GameData:/Assets/Sons/SFX/SFX_Normandie.wav')
+                      )
+                  ),
+                  ('Move', TSoundDescriptor
+                      (
+                          SoundSettings = $/SoundSettings/SFX_SoundSettings
+                          TheSoundStream = TSoundStream(FileName = 'GameData:/Assets/Sons/SFX\Moteurs\Challenger1_Tracked_MBT_Loop.wav')
+                      )
+                  ),
+            ]
+        ),
+
+        // IAMacroOrder
+        ~/IAMacroOrderModuleDescriptor,
+
+        // StrategicPosition
+        TStrategicPositionModuleDescriptor
+        (
+            PositionDescriptorList = [
+                TStrategicPositionDescriptor
+                (
+                    RelativePosition = [0,0]
+                    Layer = ~/EStrategicLayer/StrategicLayerAir
+                ),
+            ]
+        ),
+
+        // StrategicSequence
+        TStrategicSequenceModuleDescriptor
+        (
+        ),
+
+        // StrategicAbstractModuleExporterFatigue
+        TStrategicFatigueModuleDescriptor
+        (
+          MaxFatigue      = ~/StrategicMaxFatiguePerUnit
+          InitialFatigue  = 0
+        ),
+
+        // IAStratZoneIndex
+        ~/IAStratZoneIndexModuleDescriptor,
+
+    ]
+)
+export Descriptor_Unit_test_avion_bomber is TEntityDescriptor
+(
+    DescriptorId       = GUID:{66d3e799-2892-4182-9f18-4d5f68fb42c0}
+    ClassNameForDebug  = 'Pawn_test_avion_bomber'
+    ModulesDescriptors = [
+        // TypeUnit
+            TModuleSelector
+            (
+                Default            = TTypeUnitModuleDescriptor
+                (
+                    TypeUnitValue                    = ETypeUnit/Undef
+                    Nationalite                      = ENationalite/Allied
+                    TypeUnitFormation                = 'Char'
+                )
+                Selection = [
+                    NilDescriptorIfCadavre,
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TTypeUnitModuleDescriptor
+                        (
+                            Nationalite                      = ENationalite/Allied
+                            TypeUnitValue                    = ETypeUnit/Undef
+                        )
+                    )
+                ]
+            ),
+
+        // Flags
+            TFlagsModuleDescriptor
+            (
+                InitialFlagSet =
+                [
+                    Flag_Detectable,
+                    Flag_LdDetectable,
+                    Flag_Avion,
+                    Flag_Highlightable,
+                    Flag_Selectionnable,
+                    Flag_Target,
+                    Flag_HighAltitudeFlying,
+                    Flag_DetectableLowAltitude,
+                    Flag_Blessable,
+                    Flag_DEPRECATED_NePasUtiliser_OnlyForBriquePython_UniteDeCommandement,
+                ]
+            ),
+
+        // Position
+            TModuleSelector
+            (
+                Default        = TPositionModuleDescriptor
+                (
+                    UseFollowCam               = False
+                    StickToGround              = True
+                    InGeoDb                    = True
+                    PorteurMustBeVisible       = True
+                    ClampInWorld               = False
+                    ClampOutMap                = True
+                    HasNearlyNullBBox          = False
+                    GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                    Radius                     = ((0) * Metre)
+                    RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                    LowAltitudeFlyingAltitude  = ((0) * Metre)
+                    NearGroundFlyingAltitude   = ((0) * Metre)
+                )
+                Selection = [
+                    TModuleSelectorFilterIfCadavre
+                    (
+                        Descriptor = TPositionModuleDescriptor
+                        (
+                            UseFollowCam               = False
+                            StickToGround              = True
+                            InGeoDb                    = False
+                            PorteurMustBeVisible       = True
+                            ClampInWorld               = False
+                            ClampOutMap                = True
+                            HasNearlyNullBBox          = False
+                            GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                            Radius                     = ((0) * Metre)
+                            RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                            LowAltitudeFlyingAltitude  = ((0) * Metre)
+                            NearGroundFlyingAltitude   = ((0) * Metre)
+                        )
+                    ),
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TPositionModuleDescriptor
+                        (
+                            UseFollowCam               = False
+                            StickToGround              = True
+                            InGeoDb                    = False
+                            PorteurMustBeVisible       = True
+                            ClampInWorld               = False
+                            ClampOutMap                = True
+                            HasNearlyNullBBox          = False
+                            GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                            Radius                     = ((0) * Metre)
+                            RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                            LowAltitudeFlyingAltitude  = ((0) * Metre)
+                            NearGroundFlyingAltitude   = ((0) * Metre)
+                        )
+                    ),
+                ]
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // Tags
+            TTagsModuleDescriptor
+            (
+                TagSet = [
+                    "AllUnits",
+                    "Unite",
+                    "UNITE_test_avion_bomber",
+                    "InfmapCommander",
+                ]
+            ),
+
+        // ApparenceModel
+        ApparenceModel is
+            TApparenceModelModuleDescriptor
+            (
+                PickableObject                     = True
+                Depiction                          = ~/Gfx_Modele_F111E_Aardvark_US
+            ),
+
+        // GhostModule
+            TModuleSelector
+            (
+                Default        = nil
+                Selection      = [
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TGhostModuleDescriptor()
+                    )
+                ]
+            ),
+
+        // StateEngine
+            TModuleSelector
+            (
+                Default        = TStateEngineModuleDescriptor
+                (
+                    InitialStateId = 'UnitIdle'
+                    StateEngineUpdateMode = WorldControllerAccess_InWorld
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // Debug
+            ~/DebugModuleDescriptor,
+
+        // Selection
+            TModuleSelector
+            (
+                Default            = TSelectionModuleDescriptor
+                (
+                    IsSelectable       = True
+                    IsHighlightable    = True
+                    HasSelectionShader = False
+                    HasHighlightShader = True
+                    MultipleSelectionFilterPriorityDefault      = 0
+                    MultipleSelectionFilterPrioritySecondary    = 0
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+
+        // EffectApplier
+            ~/EffectApplierModuleSelector,
+
+        // Label
+            TStrategicLabelModuleDescriptor
+            (
+                BackgroundTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+                (
+                    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+                    Alterator = $/GUIOption/StrategicIconType
+                    Values =
+                    [
+                        "Texture_STRATEGIC_RTS_H_Hel",
+                        "Texture_STRATEGIC_Hel",
+                    ]
+                )
+            ),
+
+        // Orderable
+            TModuleSelector
+            (
+                Default                   = TOrderableModuleDescriptor
+                (
+                UnlockableOrders          = ~/Descriptor_OrderAvailability_test_avion_bomber
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // OrderDisplay
+            ~/OrderDisplayModuleDescriptor,
+
+        // PackSignaux
+            ~/PackSignauxModuleDescriptor,
+
+        // Deck
+            TModuleSelector
+            (
+                Default        = TDeckModuleDescriptor
+                (
+                    DeckIdentifier = 'pion_US_testAvion'
+                    RegimentName = 'None'
+                    Score = 1
+                    PictureForSelection = 'Texture_PawnPicture_Default'
+                    DeckType = 2 //GroupeArmee
+                    MaxPackCount = 12
+                )
+                Selection = [ ~/NilDescriptorIfGhostOrCadavre ]
+            ),
+
+        // StrategicBattle
+        TModuleSelector
+        (
+            Default = TStrategicBattleModuleDescriptor
+            (
+                CanEngageBattle = False
+                CanBeInitialTarget = False
+                HasZoneOfControl = False
+                AirDenyRadius = 0 * Metre
+                AirDenyRange = 0 * Metre
+                BattleSupportRadius = -1.0 * Metre
+                MinBattleSupportRadius = 0.0 * Metre
+            )
+            Selection = [ ~/NilDescriptorIfGhostOrCadavre ]
+        ),
+
+        // Visibility
+            TModuleSelector
+            (
+                Default        = TVisibilityModuleDescriptor
+                (
+                    AutoRevealType       = EAutoRevealType/AutoRevealAllies
+                    UnitConcealmentBonus = 1.0
+                    VisionUnitType       = EVisionUnitType/Undefined
+                    AlwaysComputeLoS     = False
+                    UnitIsStealth        = False
+                    HideFromDebug        = False
+                    VisionObstructionType = EVisionObstructionType/Air
+                    GroundDissimulationModifierType = EGroundDissumulationModifierType/Air
+                )
+                Selection = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // RemoteScanning
+            TModuleSelector
+            (
+                Default        = TRemoteScanningModuleDescriptor
+                (
+                    ScanningRange = ((0.0) * Metre)
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+
+        // Scanner
+            TModuleSelector
+            (
+                Default        = TReverseScannerWithIdentificationDescriptor
+                (
+                    VisibilityRollRule = TModernWarfareVisibilityRollRule
+                    (
+                        IdentifyBaseProbability     = 0.0
+                        TimeBetweenEachIdentifyRoll = 0.0
+                        VisibilityRuleDescriptor    = ~/StandardWargameVisibilityRollRule
+                        DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
+                        (
+                            MultiplicateurAPorteeMaximale            = DefaultMultiplicateurAPorteeMaximale
+                            MultiplicateurAPorteeMinimale            = DefaultMultiplicateurAPorteeMinimale
+                            Exposant                                 = DefaultExposant
+                            MultiplicateurAPorteeMaximaleEnMouvement = DefaultMultiplicateurAPorteeMaximaleEnMouvement
+                            MultiplicateurAPorteeMinimaleEnMouvement = DefaultMultiplicateurAPorteeMinimaleEnMouvement
+                            ExposantEnMouvement                      = DefaultExposantEnMouvement
+                        )
+                    )
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // ActionPoints
+        TActionPointsModuleDescriptor
+        (
+            InitialActionPoint = 4
+            ActionPointRecoveryPerTurn = 4
+            NbInitialActionsPointsForProducedPawn = 4
+        ),
+
+        // StrategicMovementLink
+        $/GFX/Everything/StrategicMovementDescriptor_aerial,
+
+        // StrategicAerial
+        TStrategicAerialModuleDescriptor
+        (
+        ),
+
+        // StrategicBomber
+        TStrategicBomberModuleDescriptor
+        (
+            APPenalty = 4.0
+            MaxDistance = 1000000.0 * Metre
+            Origin = ~/BomberOrigin/Aerial
+        ),
+
+        // CubeAction
+            TCubeActionModuleDescriptor
+            (
+                CubeActionDescriptor = ~/CubeAction_Menu_Ordres_Pawn
+            ),
+
+        // PawnUI
+        TPawnUIModuleDescriptor
+        (
+            HintToken = 'None'
+            NameToken = TBUCKToolAlternativeValues_TLocalisationStringTokenFromTEugBMutableBoolean
+             (
+                 CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicPawnName
+                 Alterator = $/GUIOption/StrategicPawnName
+                 Values =
+                 [
+                     (~/LocalisationConstantes/dico_unites, "OMQFDWBCCN"),
+                     (~/LocalisationConstantes/dico_unites, "None"),
+                 ]
+             )
+            ProdMenuTexture = 'Texture_Button_Pawn_test_avion_bomber'
+            CountryTexture = 'CommonTexture_MotherCountryFlag_None'
+        ),
+
+        // Cosmetic
+        TCosmeticModuleDescriptor
+        (
+            FxByActionList = MAP
+            [
+            ]
+            SoundByActionList = MAP
+            [
+                  ('Die', TSoundDescriptor
+                      (
+                          SoundSettings = $/SoundSettings/SFX_SoundSettings
+                          TheSoundStream = TSoundStream(FileName = 'GameData:/Assets/Sons/SFX/SFX_Normandie.wav')
+                      )
+                  ),
+                  ('Move', TSoundDescriptor
+                      (
+                          SoundSettings = $/SoundSettings/SFX_SoundSettings
+                          TheSoundStream = TSoundStream(FileName = 'GameData:/Assets/Sons/SFX\Moteurs\Challenger1_Tracked_MBT_Loop.wav')
+                      )
+                  ),
+            ]
+        ),
+
+        // IAMacroOrder
+        ~/IAMacroOrderModuleDescriptor,
+
+        // StrategicPosition
+        TStrategicPositionModuleDescriptor
+        (
+            PositionDescriptorList = [
+                TStrategicPositionDescriptor
+                (
+                    RelativePosition = [0,0]
+                    Layer = ~/EStrategicLayer/StrategicLayerAir
+                ),
+            ]
+        ),
+
+        // StrategicSequence
+        TStrategicSequenceModuleDescriptor
+        (
+        ),
+
+        // StrategicAbstractModuleExporterFatigue
+        TStrategicFatigueModuleDescriptor
+        (
+          MaxFatigue      = ~/StrategicMaxFatiguePerUnit
+          InitialFatigue  = 0
+        ),
+
+        // IAStratZoneIndex
+        ~/IAStratZoneIndexModuleDescriptor,
+
+    ]
+)
+export Descriptor_Unit_test_avion_cas is TEntityDescriptor
+(
+    DescriptorId       = GUID:{03a644f4-d115-445d-98d8-d536143bdda5}
+    ClassNameForDebug  = 'Pawn_test_avion_cas'
+    ModulesDescriptors = [
+        // TypeUnit
+            TModuleSelector
+            (
+                Default            = TTypeUnitModuleDescriptor
+                (
+                    TypeUnitValue                    = ETypeUnit/Undef
+                    Nationalite                      = ENationalite/Allied
+                    TypeUnitFormation                = 'Char'
+                )
+                Selection = [
+                    NilDescriptorIfCadavre,
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TTypeUnitModuleDescriptor
+                        (
+                            Nationalite                      = ENationalite/Allied
+                            TypeUnitValue                    = ETypeUnit/Undef
+                        )
+                    )
+                ]
+            ),
+
+        // Flags
+            TFlagsModuleDescriptor
+            (
+                InitialFlagSet =
+                [
+                    Flag_Detectable,
+                    Flag_LdDetectable,
+                    Flag_Avion,
+                    Flag_Highlightable,
+                    Flag_Selectionnable,
+                    Flag_Target,
+                    Flag_HighAltitudeFlying,
+                    Flag_DetectableLowAltitude,
+                    Flag_Blessable,
+                    Flag_DEPRECATED_NePasUtiliser_OnlyForBriquePython_UniteDeCommandement,
+                ]
+            ),
+
+        // Position
+            TModuleSelector
+            (
+                Default        = TPositionModuleDescriptor
+                (
+                    UseFollowCam               = False
+                    StickToGround              = True
+                    InGeoDb                    = True
+                    PorteurMustBeVisible       = True
+                    ClampInWorld               = False
+                    ClampOutMap                = True
+                    HasNearlyNullBBox          = False
+                    GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                    Radius                     = ((0) * Metre)
+                    RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                    LowAltitudeFlyingAltitude  = ((0) * Metre)
+                    NearGroundFlyingAltitude   = ((0) * Metre)
+                )
+                Selection = [
+                    TModuleSelectorFilterIfCadavre
+                    (
+                        Descriptor = TPositionModuleDescriptor
+                        (
+                            UseFollowCam               = False
+                            StickToGround              = True
+                            InGeoDb                    = False
+                            PorteurMustBeVisible       = True
+                            ClampInWorld               = False
+                            ClampOutMap                = True
+                            HasNearlyNullBBox          = False
+                            GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                            Radius                     = ((0) * Metre)
+                            RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                            LowAltitudeFlyingAltitude  = ((0) * Metre)
+                            NearGroundFlyingAltitude   = ((0) * Metre)
+                        )
+                    ),
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TPositionModuleDescriptor
+                        (
+                            UseFollowCam               = False
+                            StickToGround              = True
+                            InGeoDb                    = False
+                            PorteurMustBeVisible       = True
+                            ClampInWorld               = False
+                            ClampOutMap                = True
+                            HasNearlyNullBBox          = False
+                            GfxDescriptorPorteur       = ~/GfxPorteurUnite
+                            Radius                     = ((0) * Metre)
+                            RelativeScanningPosition   = ~/DecalageParDefautDuPointDeVision
+                            LowAltitudeFlyingAltitude  = ((0) * Metre)
+                            NearGroundFlyingAltitude   = ((0) * Metre)
+                        )
+                    ),
+                ]
+            ),
+
+        // LinkTeam
+            ~/LinkTeamModuleDescriptor,
+
+        // Tags
+            TTagsModuleDescriptor
+            (
+                TagSet = [
+                    "AllUnits",
+                    "Unite",
+                    "UNITE_test_avion_cas",
+                    "InfmapCommander",
+                ]
+            ),
+
+        // ApparenceModel
+        ApparenceModel is
+            TApparenceModelModuleDescriptor
+            (
+                PickableObject                     = True
+                Depiction                          = ~/Gfx_Modele_A10_Thunderbolt_II_US
+            ),
+
+        // GhostModule
+            TModuleSelector
+            (
+                Default        = nil
+                Selection      = [
+                    TModuleSelectorFilterIfGhost
+                    (
+                        Descriptor = TGhostModuleDescriptor()
+                    )
+                ]
+            ),
+
+        // StateEngine
+            TModuleSelector
+            (
+                Default        = TStateEngineModuleDescriptor
+                (
+                    InitialStateId = 'UnitIdle'
+                    StateEngineUpdateMode = WorldControllerAccess_InWorld
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // Debug
+            ~/DebugModuleDescriptor,
+
+        // Selection
+            TModuleSelector
+            (
+                Default            = TSelectionModuleDescriptor
+                (
+                    IsSelectable       = True
+                    IsHighlightable    = True
+                    HasSelectionShader = False
+                    HasHighlightShader = True
+                    MultipleSelectionFilterPriorityDefault      = 0
+                    MultipleSelectionFilterPrioritySecondary    = 0
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+
+        // EffectApplier
+            ~/EffectApplierModuleSelector,
+
+        // Label
+            TStrategicLabelModuleDescriptor
+            (
+                BackgroundTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+                (
+                    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+                    Alterator = $/GUIOption/StrategicIconType
+                    Values =
+                    [
+                        "Texture_STRATEGIC_RTS_H_Hel",
+                        "Texture_STRATEGIC_Hel",
+                    ]
+                )
+            ),
+
+        // Orderable
+            TModuleSelector
+            (
+                Default                   = TOrderableModuleDescriptor
+                (
+                UnlockableOrders          = ~/Descriptor_OrderAvailability_test_avion_cas
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // OrderDisplay
+            ~/OrderDisplayModuleDescriptor,
+
+        // PackSignaux
+            ~/PackSignauxModuleDescriptor,
+
+        // Deck
+            TModuleSelector
+            (
+                Default        = TDeckModuleDescriptor
+                (
+                    DeckIdentifier = 'pion_US_testAvion'
+                    RegimentName = 'None'
+                    Score = 1
+                    PictureForSelection = 'Texture_PawnPicture_Default'
+                    DeckType = 2 //GroupeArmee
+                    MaxPackCount = 12
+                )
+                Selection = [ ~/NilDescriptorIfGhostOrCadavre ]
+            ),
+
+        // StrategicBattle
+        TModuleSelector
+        (
+            Default = TStrategicBattleModuleDescriptor
+            (
+                CanEngageBattle = False
+                CanBeInitialTarget = False
+                HasZoneOfControl = False
+                AirDenyRadius = 0 * Metre
+                AirDenyRange = 0 * Metre
+                BattleSupportRadius = -1.0 * Metre
+                MinBattleSupportRadius = 0.0 * Metre
+            )
+            Selection = [ ~/NilDescriptorIfGhostOrCadavre ]
+        ),
+
+        // Visibility
+            TModuleSelector
+            (
+                Default        = TVisibilityModuleDescriptor
+                (
+                    AutoRevealType       = EAutoRevealType/AutoRevealAllies
+                    UnitConcealmentBonus = 1.0
+                    VisionUnitType       = EVisionUnitType/Undefined
+                    AlwaysComputeLoS     = False
+                    UnitIsStealth        = False
+                    HideFromDebug        = False
+                    VisionObstructionType = EVisionObstructionType/Air
+                    GroundDissimulationModifierType = EGroundDissumulationModifierType/Air
+                )
+                Selection = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // RemoteScanning
+            TModuleSelector
+            (
+                Default        = TRemoteScanningModuleDescriptor
+                (
+                    ScanningRange = ((0.0) * Metre)
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+
+        // Scanner
+            TModuleSelector
+            (
+                Default        = TReverseScannerWithIdentificationDescriptor
+                (
+                    VisibilityRollRule = TModernWarfareVisibilityRollRule
+                    (
+                        IdentifyBaseProbability     = 0.0
+                        TimeBetweenEachIdentifyRoll = 0.0
+                        VisibilityRuleDescriptor    = ~/StandardWargameVisibilityRollRule
+                        DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
+                        (
+                            MultiplicateurAPorteeMaximale            = DefaultMultiplicateurAPorteeMaximale
+                            MultiplicateurAPorteeMinimale            = DefaultMultiplicateurAPorteeMinimale
+                            Exposant                                 = DefaultExposant
+                            MultiplicateurAPorteeMaximaleEnMouvement = DefaultMultiplicateurAPorteeMaximaleEnMouvement
+                            MultiplicateurAPorteeMinimaleEnMouvement = DefaultMultiplicateurAPorteeMinimaleEnMouvement
+                            ExposantEnMouvement                      = DefaultExposantEnMouvement
+                        )
+                    )
+                )
+                Selection      = [~/NilDescriptorIfGhostOrCadavre]
+            ),
+
+        // ActionPoints
+        TActionPointsModuleDescriptor
+        (
+            InitialActionPoint = 4
+            ActionPointRecoveryPerTurn = 4
+            NbInitialActionsPointsForProducedPawn = 4
+        ),
+
+        // StrategicMovementLink
+        $/GFX/Everything/StrategicMovementDescriptor_aerial,
+
+        // StrategicAerial
+        TStrategicAerialModuleDescriptor
+        (
+        ),
+
+        // CubeAction
+            TCubeActionModuleDescriptor
+            (
+                CubeActionDescriptor = ~/CubeAction_Menu_Ordres_Pawn
+            ),
+
+        // PawnUI
+        TPawnUIModuleDescriptor
+        (
+            HintToken = 'None'
+            NameToken = TBUCKToolAlternativeValues_TLocalisationStringTokenFromTEugBMutableBoolean
+             (
+                 CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicPawnName
+                 Alterator = $/GUIOption/StrategicPawnName
+                 Values =
+                 [
+                     (~/LocalisationConstantes/dico_unites, "TVFYQTBVDC"),
+                     (~/LocalisationConstantes/dico_unites, "None"),
+                 ]
+             )
+            ProdMenuTexture = 'Texture_Button_Pawn_test_avion_cas'
+            CountryTexture = 'CommonTexture_MotherCountryFlag_None'
+        ),
+
+        // Cosmetic
+        TCosmeticModuleDescriptor
+        (
+            FxByActionList = MAP
+            [
+            ]
+            SoundByActionList = MAP
+            [
+                  ('Die', TSoundDescriptor
+                      (
+                          SoundSettings = $/SoundSettings/SFX_SoundSettings
+                          TheSoundStream = TSoundStream(FileName = 'GameData:/Assets/Sons/SFX/SFX_Normandie.wav')
+                      )
+                  ),
+                  ('Move', TSoundDescriptor
+                      (
+                          SoundSettings = $/SoundSettings/SFX_SoundSettings
+                          TheSoundStream = TSoundStream(FileName = 'GameData:/Assets/Sons/SFX\Moteurs\Challenger1_Tracked_MBT_Loop.wav')
+                      )
+                  ),
+            ]
+        ),
+
+        // IAMacroOrder
+        ~/IAMacroOrderModuleDescriptor,
+
+        // StrategicPosition
+        TStrategicPositionModuleDescriptor
+        (
+            PositionDescriptorList = [
+                TStrategicPositionDescriptor
+                (
+                    RelativePosition = [0,0]
+                    Layer = ~/EStrategicLayer/StrategicLayerAir
+                ),
+            ]
+        ),
+
+        // StrategicSequence
+        TStrategicSequenceModuleDescriptor
+        (
+        ),
+
+        // StrategicAbstractModuleExporterFatigue
+        TStrategicFatigueModuleDescriptor
+        (
+          MaxFatigue      = ~/StrategicMaxFatiguePerUnit
+          InitialFatigue  = 0
+        ),
+
+        // IAStratZoneIndex
+        ~/IAStratZoneIndexModuleDescriptor,
+
+    ]
+)

@@ -1,0 +1,22 @@
+// Ne pas éditer, ce fichier est auto-généré !
+
+Texture_STRATEGIC_Hel is TUIResourceTexture_Common
+(
+    FileName      = 'Assets\2D\Interface\UseStrategic\LabelIcons\NATO\default.png'
+)
+
+Texture_STRATEGIC_RTS_H_Hel is TUIResourceTexture_Common
+(
+    FileName      = 'Assets\2D\Interface\UseStrategic\LabelIcons\RTS\Hel.png'
+)
+
+
+STRATEGIC_NATORTSAdditionalTextureBank is TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ("Texture_STRATEGIC_Hel", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_Hel)]),
+        ("Texture_STRATEGIC_RTS_H_Hel", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_Hel)]),
+    ]
+)
+
