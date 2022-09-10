@@ -47,4 +47,17 @@ li {
 
 pre {
   text-align: left;
+  background-color: #dedede;
+  border: 1px solid #999;
+  padding: 1em;
+  margin: 1em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.dir-view {
+  max-height: 48em;
+  overflow-y: scroll;
 }
