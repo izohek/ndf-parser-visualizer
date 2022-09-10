@@ -58,6 +58,6 @@ pre {
 }
 
 .dir-view {
-  max-height: 48em;
+  max-height: 24em;
   overflow-y: scroll;
 }

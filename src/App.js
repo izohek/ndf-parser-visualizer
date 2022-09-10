@@ -28,8 +28,8 @@ function App() {
       parseError = e
     }
   
-  const tokens = results[0]
-  const objects = results[1]
+  const tokens = results ? results[0] : []
+  const objects = results ? results[1] : []
   
   return (
     <div className="App">
@@ -42,7 +42,7 @@ function App() {
           parseError && 
           <div>
             <p>Parse Error:</p>
-            <pre>{parseError}</pre>
+            <pre>{parseError.message}</pre>
           </div>
         }
         <pre>
