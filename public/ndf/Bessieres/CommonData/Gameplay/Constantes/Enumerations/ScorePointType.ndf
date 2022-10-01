@@ -1,0 +1,11 @@
+// Enum TScorePointType
+EScorePointType is TBaseClass
+(
+    AlwaysValid             is 0
+    UnitDestruction         is 1
+    UnitLoss                is 2
+    ZonePoint               is 3
+    MapObjective            is 4
+    OverTimeMapObjective    is 5
+    Length                  is 6
+)

@@ -1,0 +1,16 @@
+// Enum TGameEndingCondition
+EGameEndingCondition is TBaseClass
+(
+    Time                        is 0
+    ScoreVictory                is 1
+    ArmyDestroyed               is 2
+    Surrender                   is 3
+    Invoke                      is 4
+    LocalPlayerDisconnected     is 5
+    PlayerDisconnected          is 6
+    AllZonesControled           is 7
+    ScriptDecided               is 8
+    ObjectivePointCaptured      is 9
+    ScoreDefeat                 is 10
+    NotSpecified                is 11
+)
