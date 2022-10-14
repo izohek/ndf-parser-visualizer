@@ -30,6 +30,24 @@ function App() {
   
   const tokens = results ? results[0] : []
   const objects = results ? results[1] : []
+  const json = JSON.stringify(objects, null, 4)
+
+  function downloadJson() {
+    
+    if (selectedFile) {
+      const element = document.createElement("a");
+      const file = new Blob([json], {
+        type: "text/plain"
+      });
+      element.href = URL.createObjectURL(file);
+      const segments = selectedFile.split('/')
+      const singleFileName = segments[segments.length - 1]
+      element.download = singleFileName + ".json";
+      document.body.appendChild(element);
+      element.click();
+    }
+
+  }
   
   return (
     <div className="App">
@@ -38,6 +56,9 @@ function App() {
       </div>
       <div>
         <p>{ selectedFile || "Select a file" }</p>
+        { selectedFile && 
+          <button onClick={ downloadJson }>Download JSON</button>
+        }
         {
           parseError && 
           <div>
@@ -47,7 +68,7 @@ function App() {
         }
         <pre>
             { 
-              JSON.stringify(objects, null, 4)
+              json
             }
         </pre>
       </div>
