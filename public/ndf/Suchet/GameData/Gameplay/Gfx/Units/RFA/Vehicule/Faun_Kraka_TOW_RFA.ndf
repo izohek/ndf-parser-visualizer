@@ -1,0 +1,25 @@
+export ModelFile_Faun_Kraka_TOW_RFA is 'GameData:/Assets/3D/Units/RFA/Vehicule/Faun_kraka/Faun_kraka_TOW.Ase2NdfBin'
+
+Modele_Faun_Kraka_TOW_RFA is TResourceMultiMaterialMeshWithLod
+(
+    FileName     = ModelFile_Faun_Kraka_TOW_RFA
+    CivMask =  CivMask/Common
+)
+
+Modele_Faun_Kraka_TOW_RFA_MID is TResourceMultiMaterialMeshWithLod
+(
+    FileName     = 'GameData:/Assets/3D/Units/RFA/Vehicule/Faun_kraka/Faun_kraka_TOW.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)
+
+Modele_Faun_Kraka_TOW_RFA_LOW is TResourceMultiMaterialMeshWithLod
+(
+    FileName     = 'GameData:/Assets/3D/Units/RFA/Vehicule/Faun_kraka/Faun_kraka_TOW.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)
+
+Modele_Faun_Kraka_TOW_RFA_Tourelle_01 is TResourceMultiMaterialMeshWithLod
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Antichar/BGM71E_TOW_2A/BGM71E_TOW_2A_t1.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)

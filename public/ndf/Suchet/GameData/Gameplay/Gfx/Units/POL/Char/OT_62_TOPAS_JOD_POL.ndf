@@ -1,0 +1,19 @@
+export ModelFile_OT_62_TOPAS_JOD_POL is 'GameData:/Assets/3D/Units/URSS/DCA/BTR_ZD_Skrezhet/BTR_ZD_Skrezhet.Ase2NdfBin'
+
+Modele_OT_62_TOPAS_JOD_POL is TResourceMultiMaterialMeshWithLod
+(
+    FileName = ModelFile_OT_62_TOPAS_JOD_POL
+    CivMask =  CivMask/Common
+)
+
+Modele_OT_62_TOPAS_JOD_POL_MID is TResourceMultiMaterialMeshWithLod
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/DCA/BTR_ZD_Skrezhet/BTR_ZD_Skrezhet.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)
+
+Modele_OT_62_TOPAS_JOD_POL_LOW is TResourceMultiMaterialMeshWithLod
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/DCA/BTR_ZD_Skrezhet/BTR_ZD_Skrezhet.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)

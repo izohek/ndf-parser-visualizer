@@ -3,12 +3,13 @@ import { files } from "./files/FileDir";
 
 const patches = [
     "massena",
-    "bessieres"
+    "bessieres",
+    "suchet"
 ];
 
 export default function DirectoryView({root, selected}) {
 
-    const [activePatch, setActivePatch] = useState('bessieres')
+    const [activePatch, setActivePatch] = useState('suchet')
 
     return (
         <div>

@@ -1,0 +1,22 @@
+export ModelFile_OT_62_TOPAS_SPG9_POL is 'GameData:/Assets/3D/Units/US/APC/M113_ACAV/M113_ACAV.Ase2NdfBin'
+
+Modele_OT_62_TOPAS_SPG9_POL is TResourceMultiMaterialMeshWithLod
+(
+    FileName     = ModelFile_OT_62_TOPAS_SPG9_POL
+    CivMask =  CivMask/Common
+)
+
+Modele_OT_62_TOPAS_SPG9_POL_MID is TResourceMultiMaterialMeshWithLod
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/APC/M113_ACAV_MID/M113_ACAV_MID.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)
+
+Modele_OT_62_TOPAS_SPG9_POL_LOW is TResourceMultiMaterialMeshWithLod
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/APC/LODS/M113_ACAV_LOW.Ase2NdfBin'
+    CivMask =  CivMask/Common
+)
+
+
+
