@@ -1,0 +1,2257 @@
+{
+    "name": "Descriptor_Unit_2K12_KUB_DDR",
+    "type": "TEntityDescriptor",
+    "accessLevel": "export",
+    "attributes": [
+        {
+            "name": "DescriptorId",
+            "value": {
+                "value": "GUID:{c4c83faa-1edf-4382-ad7b-f54860eb49f5}",
+                "ndf": "guid"
+            },
+            "ndf": "attribute"
+        },
+        {
+            "name": "ClassNameForDebug",
+            "value": {
+                "value": "'Unit_2K12_KUB_DDR'",
+                "ndf": "string"
+            },
+            "ndf": "attribute"
+        },
+        {
+            "name": "ModulesDescriptors",
+            "value": {
+                "values": [
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TTypeUnitModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "TypeUnitValue",
+                                            "value": {
+                                                "value": "ETypeUnit/Vehicle",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "Nationalite",
+                                            "value": {
+                                                "value": "ENationalite/Axis",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MotherCountry",
+                                            "value": {
+                                                "value": "'DDR'",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "AcknowUnitType",
+                                            "value": {
+                                                "value": "~/TAcknowUnitType_SAM",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "TypeUnitFormation",
+                                            "value": {
+                                                "value": "'Artillerie'",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "name": "NilDescriptorIfCadavre",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TFlagsModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "InitialFlagSet",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "name": "Flag_Detectable",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_LdDetectable",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_Highlightable",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_Selectionnable",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_Target",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_Tank",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_Blessable",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_Combattant",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        },
+                                        {
+                                            "name": "Flag_DEPRECATED_NePasUtiliser_OnlyForBriquePython_UniteDeCommandement",
+                                            "type": "",
+                                            "children": [],
+                                            "ndf": "object"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/TargetManagerModuleSelector",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TemplateUnitCriticalModule",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Module",
+                                "value": {
+                                    "value": "~/CriticalEffectModule_Vehicule_Arme",
+                                    "ndf": "tilde"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/TargetCoordinatorModuleSelector",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TPositionModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "UseFollowCam",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "StickToGround",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "InGeoDb",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "PorteurMustBeVisible",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "ClampInWorld",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "ClampOutMap",
+                                "value": {
+                                    "value": "False",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "HasNearlyNullBBox",
+                                "value": {
+                                    "value": "False",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "GfxDescriptorPorteur",
+                                "value": {
+                                    "value": "~/GfxPorteurUnite",
+                                    "ndf": "tilde"
+                                }
+                            },
+                            {
+                                "name": "Radius",
+                                "value": {
+                                    "value": "((30) * Metre)",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "RelativeScanningPosition",
+                                "value": {
+                                    "value": "~/DecalageParDefautDuPointDeVision",
+                                    "ndf": "tilde"
+                                }
+                            },
+                            {
+                                "name": "LowAltitudeFlyingAltitude",
+                                "value": {
+                                    "value": "((0) * Metre)",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "NearGroundFlyingAltitude",
+                                "value": {
+                                    "value": "((0) * Metre)",
+                                    "ndf": "string"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/PlayerMissionModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "InflammableModuleDescriptorUnit",
+                        "type": "",
+                        "children": [],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/LinkTeamModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TTagsModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "TagSet",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "\"AllUnits\"",
+                                            "ndf": "string"
+                                        },
+                                        {
+                                            "value": "\"Unite\"",
+                                            "ndf": "string"
+                                        },
+                                        {
+                                            "value": "\"UNITE_2K12_KUB_DDR\"",
+                                            "ndf": "string"
+                                        },
+                                        {
+                                            "value": "\"Canon_AA_Standard\"",
+                                            "ndf": "string"
+                                        },
+                                        {
+                                            "value": "\"Canon_AA\"",
+                                            "ndf": "string"
+                                        },
+                                        {
+                                            "value": "\"AllowedForMissileRoE\"",
+                                            "ndf": "string"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TExperienceModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "ExperienceLevelsPackDescriptor",
+                                "value": {
+                                    "value": "~/ExperienceLevelsPackDescriptor_XP_pack_simple",
+                                    "ndf": "tilde"
+                                }
+                            },
+                            {
+                                "name": "CanWinExperience",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "ExperienceGainBySecond",
+                                "value": {
+                                    "value": "~/ExperienceGainBySecond",
+                                    "ndf": "tilde"
+                                }
+                            },
+                            {
+                                "name": "ExperienceMultiplierBonusOnKill",
+                                "value": {
+                                    "value": "~/ExperienceMultiplierBonusOnKill",
+                                    "ndf": "tilde"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TVisibilityModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "AutoRevealType",
+                                            "value": {
+                                                "value": "EAutoRevealType/AutoRevealAllies",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnitConcealmentBonus",
+                                            "value": {
+                                                "value": "1.0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "VisionUnitType",
+                                            "value": {
+                                                "value": "EVisionUnitType/AlwaysOnGround",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "AlwaysComputeLoS",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnitIsStealth",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "HideFromDebug",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "VisionObstructionType",
+                                            "value": {
+                                                "value": "EVisionObstructionType/Vehicle",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "GroundDissimulationModifierType",
+                                            "value": {
+                                                "value": "EGroundDissumulationModifierType/Ground",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "ApparenceModel",
+                        "type": "TModuleSelector",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TApparenceModelModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "PickableObject",
+                                            "value": {
+                                                "value": "True",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "Depiction",
+                                            "value": {
+                                                "value": "~/Gfx_2K12_KUB_DDR_Autogen",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "GhostDepiction",
+                                            "value": {
+                                                "value": "~/GhostDepiction_2K12_KUB_DDR",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "BlackHoleIdentifier",
+                                            "value": {
+                                                "value": "\"2K12_KUB_DDR\"",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "GameplayBBoxBoneName",
+                                            "value": {
+                                                "value": "\"chassis\"",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TAutoCoverModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "AutoCoverRange",
+                                            "value": {
+                                                "value": "350*Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "OccupationRadius",
+                                            "value": {
+                                                "value": "100*Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "TerrainListMask",
+                                            "value": {
+                                                "value": "~/ETerrainType/None | ~/ETerrainType/ForetLegere | ~/ETerrainType/ForetDense",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "TerrainList",
+                                            "value": {
+                                                "values": [
+                                                    {
+                                                        "value": "~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ",
+                                                        "ndf": "tilde"
+                                                    }
+                                                ],
+                                                "ndf": "array"
+                                            }
+                                        },
+                                        {
+                                            "name": "UseTerrainsForEscape",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "WeaponManager",
+                        "type": "TModuleSelector",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "value": "$/GFX/Everything/WeaponDescriptor_2K12_KUB_DDR",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TDamageModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "CommonDamageDescriptor",
+                                            "value": {
+                                                "name": "TDamageDescriptor",
+                                                "type": "",
+                                                "children": [
+                                                    {
+                                                        "name": "SuppressDamagesRegenRatio",
+                                                        "value": {
+                                                            "value": "~/GroundUnit_SuppressDamagesRegenRatioList",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "SuppressDamagesRegenRatioOutOfRange",
+                                                        "value": {
+                                                            "value": "~/GroundUnit_SuppressDamagesRegenRatioOutOfRange",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "StunDamagesRegen",
+                                                        "value": {
+                                                            "value": "~/GroundUnit_StunDamagesRegen",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "StunFreezesUnits",
+                                                        "value": {
+                                                            "value": "False",
+                                                            "ndf": "string"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "BlindageProperties",
+                                                        "value": {
+                                                            "name": "TBlindageProperties",
+                                                            "type": "",
+                                                            "children": [
+                                                                {
+                                                                    "name": "ArmorDescriptorFront",
+                                                                    "value": {
+                                                                        "value": "ArmorDescriptor_Blindage_1",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "ArmorDescriptorSides",
+                                                                    "value": {
+                                                                        "value": "ArmorDescriptor_Blindage_1",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "ArmorDescriptorRear",
+                                                                    "value": {
+                                                                        "value": "ArmorDescriptor_Blindage_1",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "ArmorDescriptorTop",
+                                                                    "value": {
+                                                                        "value": "ArmorDescriptor_Blindage_1",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "ndf": "object"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "MaxSuppressionDamages",
+                                                        "value": {
+                                                            "value": "~/GroundUnit_MaxSuppressionDamages",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "MaxStunDamages",
+                                                        "value": {
+                                                            "value": "~/GroundUnit_MaxStunDamages",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    }
+                                                ],
+                                                "ndf": "object"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxDamages",
+                                            "value": {
+                                                "value": "10.0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "HitRollSize",
+                                            "value": {
+                                                "value": "0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "HitRollECM",
+                                            "value": {
+                                                "value": "0.0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxHPForHUD",
+                                            "value": {
+                                                "value": "10",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "AutoOrientation",
+                                            "value": {
+                                                "value": "True",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "IsTargetableAsBoat",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "IsTargetableOutsideCenter",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "SkipCadavreCreation",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UseDamageMultiplierForFirePower",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UseTopArmorAgainstFire",
+                                            "value": {
+                                                "value": "True",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "PhysicalDamageLevelsPack",
+                                            "value": {
+                                                "value": "~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "SuppressDamageLevelsPack",
+                                            "value": {
+                                                "value": "~/DamageLevelsPackDescriptor_GroundUnits_packSupp",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "StunDamageLevelsPack",
+                                            "value": {
+                                                "value": "~/DamageLevelsPackDescriptor_Unit_packStun",
+                                                "ndf": "tilde"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TRoutModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "MoralLevel",
+                                            "value": {
+                                                "value": "0",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "FacingInfos",
+                        "type": "TModuleSelector",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TFacingInfosModuleDescriptor",
+                                    "type": "",
+                                    "children": [],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "GenericMovement",
+                        "type": "TModuleSelector",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TGenericMovementModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "MaxSpeed",
+                                            "value": {
+                                                "value": "90 * Metre",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "LandMovement",
+                        "type": "TModuleSelector",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TLandMovementModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "UnitMovingType",
+                                            "value": {
+                                                "value": "EUnitMovingType/Track",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "PathfindType",
+                                            "value": {
+                                                "value": "~/PathfindTypes/FullTracks",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "PreferredLayerMask",
+                                            "value": {
+                                                "value": "EWorldFloorLayer/All",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "VitesseCombat",
+                                            "value": {
+                                                "value": "((120) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "SpeedBonusOnRoad",
+                                            "value": {
+                                                "value": "1.4444444444444446",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxAcceleration",
+                                            "value": {
+                                                "value": "((50.0) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxDeceleration",
+                                            "value": {
+                                                "value": "((100.0) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "TempsDemiTour",
+                                            "value": {
+                                                "value": "7.0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "VehicleSubType",
+                                            "value": {
+                                                "value": "LandVehicleSubType/Tracked",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "StartTime",
+                                            "value": {
+                                                "value": "(0 * Seconde)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "StopTime",
+                                            "value": {
+                                                "value": "(0 * Seconde)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "RotationStartTime",
+                                            "value": {
+                                                "value": "(0 * Seconde)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "RotationStopTime",
+                                            "value": {
+                                                "value": "(0 * Seconde)",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TFuelModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "FuelCapacity",
+                                            "value": {
+                                                "value": "850",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "FuelMoveDuration",
+                                            "value": {
+                                                "value": "500.0",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TScannerConfigurationDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "OpticsAltitudeConfig",
+                                            "value": {
+                                                "value": "~/EVisionOpticsAltitudeConfig/DontUse",
+                                                "ndf": "tilde"
+                                            }
+                                        },
+                                        {
+                                            "name": "DoesNotCountInScannerAbsoluteMaxRange",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "PorteeVisionTBA",
+                                            "value": {
+                                                "value": "((0.0) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "PorteeVisionFOW",
+                                            "value": {
+                                                "value": "((0.0) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "DetectionTBA",
+                                            "value": {
+                                                "value": "((14000) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "PorteeVision",
+                                            "value": {
+                                                "value": "((10000) * Metre)",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "PorteeIdentification",
+                                            "value": {
+                                                "value": "0.0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "OpticalStrength",
+                                            "value": {
+                                                "value": "63.675",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "OpticalStrengthAltitude",
+                                            "value": {
+                                                "value": "250",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnitDetectStealthUnit",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "SpecializedDetections",
+                                            "value": {
+                                                "value": [
+                                                    {
+                                                        "value": [
+                                                            "EVisionUnitType/AlwaysInHighAltitude",
+                                                            {
+                                                                "value": "30000.0*Metre",
+                                                                "ndf": "string"
+                                                            }
+                                                        ],
+                                                        "ndf": "tuple"
+                                                    }
+                                                ],
+                                                "ndf": "map"
+                                            }
+                                        },
+                                        {
+                                            "name": "SpecializedOpticalStrengths",
+                                            "value": {
+                                                "value": [],
+                                                "ndf": "map"
+                                            }
+                                        },
+                                        {
+                                            "name": "IgnoreObstacles",
+                                            "value": {
+                                                "value": [],
+                                                "ndf": "map"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TReverseScannerWithIdentificationDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "VisibilityRollRule",
+                                            "value": {
+                                                "name": "TModernWarfareVisibilityRollRule",
+                                                "type": "",
+                                                "children": [
+                                                    {
+                                                        "name": "IdentifyBaseProbability",
+                                                        "value": {
+                                                            "value": "0.2",
+                                                            "ndf": "string"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "TimeBetweenEachIdentifyRoll",
+                                                        "value": {
+                                                            "value": "10.0",
+                                                            "ndf": "string"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "VisibilityRuleDescriptor",
+                                                        "value": {
+                                                            "value": "~/StandardWargameVisibilityRollRule",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "DistanceMultiplierRule",
+                                                        "value": {
+                                                            "name": "TModernWarfareDistanceMultiplierRollRuleDescriptor",
+                                                            "type": "",
+                                                            "children": [
+                                                                {
+                                                                    "name": "MultiplicateurAPorteeMaximale",
+                                                                    "value": {
+                                                                        "value": "DefaultMultiplicateurAPorteeMaximale",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "MultiplicateurAPorteeMinimale",
+                                                                    "value": {
+                                                                        "value": "DefaultMultiplicateurAPorteeMinimale",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "Exposant",
+                                                                    "value": {
+                                                                        "value": "DefaultExposant",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "MultiplicateurAPorteeMaximaleEnMouvement",
+                                                                    "value": {
+                                                                        "value": "DefaultMultiplicateurAPorteeMaximaleEnMouvement",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "MultiplicateurAPorteeMinimaleEnMouvement",
+                                                                    "value": {
+                                                                        "value": "DefaultMultiplicateurAPorteeMinimaleEnMouvement",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "ExposantEnMouvement",
+                                                                    "value": {
+                                                                        "value": "DefaultExposantEnMouvement",
+                                                                        "ndf": "string"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "ndf": "object"
+                                                        }
+                                                    }
+                                                ],
+                                                "ndf": "object"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TTransportableModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "Categories",
+                                            "value": {
+                                                "values": [],
+                                                "ndf": "array"
+                                            }
+                                        },
+                                        {
+                                            "name": "TransportedTexture",
+                                            "value": {
+                                                "value": "\"UseInGame_Transport_flak\"",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "TransportedSoldier",
+                                            "value": {
+                                                "value": "'2K12_KUB_DDR'",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "NbSeatsOccupied",
+                                            "value": {
+                                                "value": "99",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "TimeToLoad",
+                                            "value": {
+                                                "value": "0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "IsTowable",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "SuppressDamageRatioIfTransporterKilled",
+                                            "value": {
+                                                "value": "DefaultTransportableSuppressDamageRatioIfTransporterKilled",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "TransportListAvailableForSpawn",
+                                            "value": {
+                                                "values": [],
+                                                "ndf": "array"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "MissileCarriage",
+                        "type": "TemplateUnitMissileCarriage",
+                        "children": [
+                            {
+                                "name": "Connoisseur",
+                                "value": {
+                                    "value": "MissileCarriage_2K12_KUB_DDR",
+                                    "ndf": "string"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TCadavreGeneratorModuleDescriptorUnit",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "CadavreDescriptor",
+                                "value": {
+                                    "value": "~/Descriptor_UnitCadavre_2K12_KUB_DDR ",
+                                    "ndf": "tilde"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TIAStratModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "DatabaseId",
+                                            "value": {
+                                                "value": "1",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "GameplayBehavior",
+                                            "value": {
+                                                "value": "EGameplayBehavior/Nothing | EGameplayBehavior/ForbidFleeFromAttackerEffect",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/IAStratZoneIndexModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TStateEngineCompanyModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "InitialStateId",
+                                            "value": {
+                                                "value": "'CompanyInit'",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "StateEngineUpdateMode",
+                                            "value": {
+                                                "value": "WorldControllerAccess_InWorld",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TStateEngineModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "InitialStateId",
+                                            "value": {
+                                                "value": "'UnitIdle'",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "StateEngineUpdateMode",
+                                            "value": {
+                                                "value": "WorldControllerAccess_InWorld",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/DebugModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "value": "~/TemplateSelectionModule",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "value": "~/EffectApplierModuleSelector",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TCapaciteModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "DefaultSkillList",
+                                            "value": {
+                                                "values": [
+                                                    {
+                                                        "value": "~/Capacite_Menace_Ennemi_Proche",
+                                                        "ndf": "tilde"
+                                                    },
+                                                    {
+                                                        "value": "~/Capacite_Soutien_Allie_Proche",
+                                                        "ndf": "tilde"
+                                                    }
+                                                ],
+                                                "ndf": "array"
+                                            }
+                                        },
+                                        {
+                                            "name": "PostOrderSkillList",
+                                            "value": {
+                                                "value": [],
+                                                "ndf": "map"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TModernWarfareProductionModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "Factory",
+                                            "value": {
+                                                "value": "EDefaultFactories/AT",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "ProductionYear",
+                                            "value": {
+                                                "value": "1989",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "ProductionTime",
+                                            "value": {
+                                                "value": "5",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "ProductionRessourcesNeeded",
+                                            "value": {
+                                                "value": [
+                                                    {
+                                                        "value": [
+                                                            {
+                                                                "value": "~/Resource_CommandPoints",
+                                                                "ndf": "string"
+                                                            },
+                                                            {
+                                                                "value": "80",
+                                                                "ndf": "string"
+                                                            }
+                                                        ],
+                                                        "ndf": "tuple"
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            {
+                                                                "value": "~/Resource_Tickets",
+                                                                "ndf": "string"
+                                                            },
+                                                            {
+                                                                "value": "4",
+                                                                "ndf": "string"
+                                                            }
+                                                        ],
+                                                        "ndf": "tuple"
+                                                    }
+                                                ],
+                                                "ndf": "map"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/InfluencePositionModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "value": "~/InfluenceDataModuleSelector",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TAutomaticBehaviorModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "CanAssist",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "AssistRequestBroadcastRadius",
+                                            "value": {
+                                                "value": "0.0 * Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "DistanceToFlee",
+                                            "value": {
+                                                "value": "1000.0 * Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxDistanceForOffensiveReaction",
+                                            "value": {
+                                                "value": "1000.0 * Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxDistanceForOffensiveReactionOnFlyingTarget",
+                                            "value": {
+                                                "value": "0.0 * Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "MaxDistanceForEngagement",
+                                            "value": {
+                                                "value": "0.0 * Metre",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "SearchedTagsInEngagementTarget",
+                                            "value": {
+                                                "values": [
+                                                    {
+                                                        "value": "\"AllUnits\"",
+                                                        "ndf": "string"
+                                                    }
+                                                ],
+                                                "ndf": "array"
+                                            }
+                                        },
+                                        {
+                                            "name": "ApproachTargetEvenIfUndamageable",
+                                            "value": {
+                                                "value": "False",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TCubeActionModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "CubeActionDescriptor",
+                                "value": {
+                                    "value": "~/CubeAction_Menu_Ordres_unites",
+                                    "ndf": "tilde"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TMinimapDisplayModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Texture",
+                                "value": {
+                                    "value": "\"Texture_Minimap_Unit_unit\"",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "GhostTexture",
+                                "value": {
+                                    "value": "\"Texture_Minimap_Unit_unit\"",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "IsAlwaysVisible",
+                                "value": {
+                                    "value": "False",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "UseTeamColor",
+                                "value": {
+                                    "value": "True",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "FollowUnitOrientation",
+                                "value": {
+                                    "value": "False",
+                                    "ndf": "string"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TOrderConfigModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "ValidOrders",
+                                "value": {
+                                    "value": "~/Descriptor_OrderAvailability_2K12_KUB_DDR",
+                                    "ndf": "tilde"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TOrderableModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "UnlockableOrders",
+                                            "value": {
+                                                "value": "~/Descriptor_OrderAvailability_2K12_KUB_DDR",
+                                                "ndf": "tilde"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/OrderDisplayModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "value": "~/GroupableUnitModuleSelector",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TTacticalLabelModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "MultiSelectionSortingOrder",
+                                            "value": {
+                                                "value": "16080",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnitName",
+                                            "value": {
+                                                "value": "'RJBOKSXUIF'",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "IdentifiedTexture",
+                                            "value": {
+                                                "name": "TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger",
+                                                "type": "",
+                                                "children": [
+                                                    {
+                                                        "name": "CommandNameTrigger",
+                                                        "value": {
+                                                            "value": "~/SpecificCommandName/UpdateGUIFromIconType",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "Alterator",
+                                                        "value": {
+                                                            "value": "$/GUIOption/IconType",
+                                                            "ndf": "string"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "Values",
+                                                        "value": {
+                                                            "values": [
+                                                                {
+                                                                    "value": "\"Texture_RTS_H_AA\"",
+                                                                    "ndf": "string"
+                                                                },
+                                                                {
+                                                                    "value": "\"Texture_AA\"",
+                                                                    "ndf": "string"
+                                                                }
+                                                            ],
+                                                            "ndf": "array"
+                                                        }
+                                                    }
+                                                ],
+                                                "ndf": "object"
+                                            }
+                                        },
+                                        {
+                                            "name": "DefaultSpecialtyToken",
+                                            "value": {
+                                                "value": "\"tank_C\"",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnidentifiedTexture",
+                                            "value": {
+                                                "name": "TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger",
+                                                "type": "",
+                                                "children": [
+                                                    {
+                                                        "name": "CommandNameTrigger",
+                                                        "value": {
+                                                            "value": "~/SpecificCommandName/UpdateGUIFromIconType",
+                                                            "ndf": "tilde"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "Alterator",
+                                                        "value": {
+                                                            "value": "$/GUIOption/IconType",
+                                                            "ndf": "string"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "Values",
+                                                        "value": {
+                                                            "values": [
+                                                                {
+                                                                    "value": "\"Texture_RTS_H_veh_nonIdentifie\"",
+                                                                    "ndf": "string"
+                                                                },
+                                                                {
+                                                                    "value": "\"Texture_veh_nonIdentifie\"",
+                                                                    "ndf": "string"
+                                                                }
+                                                            ],
+                                                            "ndf": "array"
+                                                        }
+                                                    }
+                                                ],
+                                                "ndf": "object"
+                                            }
+                                        },
+                                        {
+                                            "name": "PositionHeightOffset",
+                                            "value": {
+                                                "value": "1000.0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "NbSoldiers",
+                                            "value": {
+                                                "value": "0",
+                                                "ndf": "string"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "value": "~/TargetDataModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "value": "~/PackSignauxModuleDescriptor",
+                        "ndf": "tilde"
+                    },
+                    {
+                        "name": "TModuleSelector",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "Default",
+                                "value": {
+                                    "name": "TStrategicDataModuleDescriptor",
+                                    "type": "",
+                                    "children": [
+                                        {
+                                            "name": "UnitAttackValue",
+                                            "value": {
+                                                "value": "1",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnitDefenseValue",
+                                            "value": {
+                                                "value": "1",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "UnitBonusXpPerLevelValue",
+                                            "value": {
+                                                "value": "0",
+                                                "ndf": "string"
+                                            }
+                                        },
+                                        {
+                                            "name": "CompanyDissolutionTransferTo",
+                                            "value": {
+                                                "values": [
+                                                    {
+                                                        "value": "\"Stab\"",
+                                                        "ndf": "string"
+                                                    }
+                                                ],
+                                                "ndf": "array"
+                                            }
+                                        }
+                                    ],
+                                    "ndf": "object"
+                                }
+                            },
+                            {
+                                "name": "Selection",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "~/NilDescriptorIfCadavre ",
+                                            "ndf": "tilde"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    },
+                    {
+                        "name": "TUnitUIModuleDescriptor",
+                        "type": "",
+                        "children": [
+                            {
+                                "name": "HintToken",
+                                "value": {
+                                    "value": "'Vehicle'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "RoleList",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "'tank_C'",
+                                            "ndf": "string"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            },
+                            {
+                                "name": "SpecialtiesList",
+                                "value": {
+                                    "values": [
+                                        {
+                                            "value": "'AA'",
+                                            "ndf": "string"
+                                        }
+                                    ],
+                                    "ndf": "array"
+                                }
+                            },
+                            {
+                                "name": "NameToken",
+                                "value": {
+                                    "value": "'RJBOKSXUIF'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "InfoPanelConfigurationToken",
+                                "value": {
+                                    "value": "'Default'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "TypeSpecificToken",
+                                "value": {
+                                    "value": "'TSP_AA'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "RealRoadSpeed",
+                                "value": {
+                                    "value": "79",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "IsAce",
+                                "value": {
+                                    "value": "False",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "GenerateName",
+                                "value": {
+                                    "value": "true",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "MenuIconTexture",
+                                "value": {
+                                    "value": "'Texture_RTS_H_AA'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "ButtonTexture",
+                                "value": {
+                                    "value": "'Texture_Button_Unit_2K12_KUB_DDR'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "CountryTexture",
+                                "value": {
+                                    "value": "'CommonTexture_MotherCountryFlag_DDR'",
+                                    "ndf": "string"
+                                }
+                            },
+                            {
+                                "name": "TypeStrategicCount",
+                                "value": {
+                                    "value": "ETypeStrategicCount/Artillery",
+                                    "ndf": "string"
+                                }
+                            }
+                        ],
+                        "ndf": "object"
+                    }
+                ],
+                "ndf": "array"
+            },
+            "ndf": "attribute"
+        }
+    ],
+    "ndf": "object-parser"
+}

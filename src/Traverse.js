@@ -1,18 +1,16 @@
 import React, {useState} from "react";
-import trav1 from "./test-data/trav-1.json";
-import { inspect, keyPathFromString } from 'ndf-parser';
+import trav2 from "./test-data/trav-2.json";
+import { search } from 'ndf-parser';
 
 export default function Traverse() {
 
     const [keypath, setKeypath] = useState('')
-    const [jsonData, setJsonData] = useState(trav1)
+    const [jsonData, setJsonData] = useState(trav2)
     const [output, setOutput] = useState('')
 
     function traverse() {
         console.log("Traverse")
-        let path = keyPathFromString(keypath)
-        console.log(path)
-        let x = inspect(jsonData, path)
+        let x = search(jsonData, keypath)
         console.log(x)
         setOutput(x)
     }
@@ -32,7 +30,7 @@ export default function Traverse() {
 
             <div>
                 Output
-                <pre>{output}</pre>
+                <pre>{JSON.stringify(output, null, 4)}</pre>
                 <pre>{JSON.stringify(jsonData, null, 4)}</pre>
             </div>
         </div>
