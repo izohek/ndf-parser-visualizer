@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import trav2 from "./test-data/trav-2.json";
-import { search } from 'ndf-parser';
+import { search } from '@izohek/ndf-parser';
 
 export default function Traverse() {
 

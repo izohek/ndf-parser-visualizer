@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { NdfParser } from "ndf-parser"
+import { NdfParser } from "@izohek/ndf-parser"
 import DirectoryView from './DirectoryView';
 
 function ParserVisualizer() {
@@ -28,7 +28,6 @@ function ParserVisualizer() {
       parseError = e
     }
   
-  const tokens = results ? results[0] : []
   const objects = results ? results[1] : []
   const json = JSON.stringify(objects, null, 4)
 
